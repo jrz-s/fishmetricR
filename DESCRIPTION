@@ -8,7 +8,7 @@ Authors@R:
            email = "rzaratesalazar@gmail.com", 
            role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9251-5340"))
-Description: Package to obtain allometric coefficients of fish from the FishBase database. 
+Description: A package to obtain allometric coefficients of fish from the FishBase database via web scraping. 
     The functions use web scraping to extract information on length-weight relationships 
     and allow batch processing of multiple species.
 License: MIT + file LICENSE
