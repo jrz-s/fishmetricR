@@ -23,10 +23,6 @@ To install directly from GitHub:
 
 remotes::install\_github(“jrz-s/fishmetricR”)
 
-# Install fishbaseallometricR from GitHub
-
-remotes::install\_github(“jrz-s/fishmetricR”)
-
 # Load package
 
 library(fishmetricR)
