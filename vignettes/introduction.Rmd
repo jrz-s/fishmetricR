@@ -1,9 +1,5 @@
 ---
 title: "Introduction to fishmetricR package"
-author: 
-- Zárate-Salazar, J. Rafael, PhD
-- Researcher | PPEC - UFS
-- rzaratesalazar@gmail.com
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to fishmetricR package}
