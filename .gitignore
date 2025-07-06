@@ -2,3 +2,41 @@
 inst/doc
 /doc/
 /Meta/
+
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data
+.RData
+
+# User-specific files
+.Ruserdata
+
+# Example files
+.Rproj.user/
+
+# Output folders
+.Rplots.pdf
+
+# Compiled shared objects
+*.so
+*.dll
+*.dylib
+
+# Temporary files created by RStudio
+.Rproj.user/
+.Rhistory
+
+# Packrat (dependency management)
+packrat/lib/
+packrat/src/
+
+# Mac OS files
+.DS_Store
+
+# Logs and other
+*.log
+
+# Ignore README.Rmd (so only README.md is committed)
+README.Rmd
