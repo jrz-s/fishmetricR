@@ -89,6 +89,6 @@ biologically informative — for example:
 # References
 
 -   Froese, R. & Pauly, D. (Eds). FishBase. World Wide Web electronic
-    publication. Acess: <https://fishbase.se>
+    publication. Link access: <https://fishbase.se>
 
 -   Documentação do pacote **fishmetricR**

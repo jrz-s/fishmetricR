@@ -85,6 +85,6 @@ This transformation allows the estimation of \( \log_{10}(a) \) and \( b \) usin
   
 # References
 
-- Froese, R. & Pauly, D. (Eds). FishBase. World Wide Web electronic publication. Acess: https://fishbase.se
+- Froese, R. & Pauly, D. (Eds). FishBase. World Wide Web electronic publication. Link access: https://fishbase.se
 
 - Documentação do pacote **fishmetricR** 
