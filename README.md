@@ -1,4 +1,7 @@
-# fishmetricR
+[![License:
+MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 
 R package to obtain allometric coefficients of fish from
 [FishBase](https://www.fishbase.se/), via web scraping.
