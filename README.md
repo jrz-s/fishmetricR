@@ -29,19 +29,20 @@ library(fishmetricR)
 
 # Application example
 
-Example 1: Retrieve coefficients for a single species
+Example 1: Retrieve coefficients for a unique species
 
-get\_allometric(genus = “Brycon”, species = “orthotaenia”)
+fishmetricR::get\_fish\_allometric(genus = “Brycon”, species =
+“orthotaenia”)
 
 Example 2: Retrieve coefficients for multiple species
 
-get\_fish\_allometric( genus = c(“Clarias”, “Piaractus”, “Brycon”),
-species = c(“gariepinus”, “brachypomus”, “orthotaenia”))
+fishmetricR::get\_fish\_allometric( genus = c(“Clarias”, “Piaractus”,
+“Brycon”), species = c(“gariepinus”, “brachypomus”, “orthotaenia”))
 
 # What it does?
 
-The get\_allometric() function performs web scraping of FishBase to
-collect allometric coefficients.
+The get\_fish\_allometric()) function performs web scraping of FishBase
+to collect allometric coefficients.
 
 The data returned includes:
 
@@ -87,4 +88,4 @@ biologically informative — for example:
 -   Froese, R. & Pauly, D. (Eds). FishBase. World Wide Web electronic
     publication. Link access: <https://fishbase.se>
 
--   Documentação do pacote **fishmetricR**
+-   **fishmetricR** package documentation.
