@@ -46,9 +46,9 @@ to collect allometric coefficients.
 
 The data returned includes:
 
--   **a**: slope of the length-weight equation
+-   *a*: slope of the length-weight equation
 
--   **b**: exponent of the length-weight equation
+-   *b*: exponent of the length-weight equation
 
 It also includes other relevant information such as minimum and maximum
 sizes, location, sample size, R², etc.
