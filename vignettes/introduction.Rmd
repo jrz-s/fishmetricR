@@ -1,5 +1,9 @@
 ---
 title: "Introduction to fishmetricR package"
+author: 
+- "Zárate-Salazar, J. Rafael, PhD"
+- "Researcher | PPEC - UFS"
+- "rzatatesalazar@gmail.com"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to fishmetricR package}
@@ -28,28 +32,33 @@ You can install the package directly from GitHub:
 # install.packages("remotes")
 remotes::install_github("jrz-s/fishmetricR")
 ```
-
-```{r setup}
-library(fishmetricR)
-```
-
 # Application example
 
 ```{r}
 
 library(fishmetricR)
 
-# Example 1: Retrieve coefficients for a single species
-output1 <- get_allometric(genus = "Brycon"
-                         , species = "orthotaenia")
+# Example 1: Retrieve coefficients for a unique species
+output1 <- fishmetricR::get_fish_allometric(
+                          genus = "Brycon"
+                         ,species = "orthotaenia")
 
 print(output1)
 
+## Export with kable function
+knitr::kable(output1
+             ,caption = "Get coefficients for a unique species")
+
 # Example 2: Retrieve coefficients for multiple species
-output2 <- get_fish_allometric(genus = c("Clarias","Piaractus","Brycon")
-                         , species = c("gariepinus","brachypomus","orthotaenia"))
+output2 <- fishmetricR::get_fish_allometric(
+                          genus = c("Brycon","Clarias","Piaractus")
+                         ,species = c("orthotaenia","gariepinus","brachypomus"))
 
 print(output2)
+
+## Export with kable function
+knitr::kable(output2
+             ,caption = "Get coefficients for multiple species")
 
 ```
 
@@ -59,9 +68,9 @@ The get_allometric() function performs web scraping of FishBase to collect the a
 
 The data returned includes:
 
-- **a**: slope of the length-weight equation
+- \( a \): slope of the length-weight equation
 
-- **b**: exponent of the length-weight equation
+- \( b \): exponent of the length-weight equation
 
 It also includes other relevant information such as minimum and maximum sizes, location, sample size, R², etc.
 
@@ -96,4 +105,4 @@ This transformation allows the estimation of \( \log_{10}(a) \) and \( b \) usin
 
 - Froese, R. & Pauly, D. (Eds). FishBase. World Wide Web electronic publication. Acess: https://fishbase.se
 
-- Documentação do pacote **fishmetricR**
+- **fishmetricR** package documentation.

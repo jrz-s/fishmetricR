@@ -2,27 +2,57 @@
 % Please edit documentation in R/get_allometric.R
 \name{get_allometric}
 \alias{get_allometric}
-\title{Get allometric data from FishBase for a single species}
+\title{Get allometric data from FishBase for multiple species}
 \usage{
 get_allometric(genus, species)
 }
 \arguments{
-\item{genus}{Name of the genus of the fish (ex: "Brycon")}
+\item{genus}{A character vector with the genus name(s) of the fish.}
 
-\item{species}{Name of the fish species (ex: "orthotaenia")}
+\item{species}{A character vector with the species name(s) of the fish.}
 }
 \value{
-A \code{data.frame} with the allometric coefficients \code{a}, \code{b} and other coefficients.
+A \code{data.frame} containing:
+\itemize{
+\item \code{a}: intercept of the allometric equation
+\item \code{b}: exponent of the allometric equation
+\item \code{scientific_name}, \code{genus}, \code{species}, \code{locality}, etc.
+}
 }
 \description{
-This function web scrapes the FishBase (https://fishbase.se/) website to obtain the coefficients of the length-weight equation.
+This function performs web scraping on the FishBase website (https://fishbase.se/)
+to obtain the coefficients of the length-weight equation for one or more fish species.
 }
 \details{
-Agronomist | Biodiversity - MS | Soil Science - PhD
+The length-weight relationship is based on the classical allometric equation:
+
+\deqn{W = a \cdot L^b}
+
+Where:
+\itemize{
+\item \eqn{W} is the body weight (in grams),
+\item \eqn{L} is the length (in cm),
+\item \eqn{a} is the intercept,
+\item \eqn{b} is the allometric exponent.
+}
+
+The equation is log-transformed for linear regression:
+\deqn{\log_{10}(W) = \log_{10}(a) + b \cdot \log_{10}(L)}
+
+Values of \eqn{b} indicate growth type:
+\itemize{
+\item \eqn{b ≈ 3}: isometric growth,
+\item \eqn{b > 3}: positive allometry,
+\item \eqn{b < 3}: negative allometry.
+}
 }
 \seealso{
-\url{mailto:rzaratesalazar@gmail.com}
+\url{https://fishbase.se/}
 }
 \author{
-Zárate-Salazar, Jhonatan Rafael (Researcher | PPEC - UFS)
+Zárate-Salazar, Jhonatan Rafael, PhD \cr
+Researcher | PPEC - UFS \cr
+Email: \email{rzaratesalazar@gmail.com} \cr
+ORCID: \url{https://orcid.org/0000-0001-9251-5340} \cr
+Lattes: \url{http://lattes.cnpq.br/5635448203792516}
 }

@@ -1,13 +1,46 @@
-#' @title Get allometric data from FishBase for a single species
+#' @title Get allometric data from FishBase for multiple species
 #'
-#' @description This function web scrapes the FishBase (https://fishbase.se/) website to obtain the coefficients of the length-weight equation.
+#' @description
+#' This function performs web scraping on the FishBase website (https://fishbase.se/)
+#' to obtain the coefficients of the length-weight equation for one or more fish species.
 #'
-#' @author Zárate-Salazar, Jhonatan Rafael (Researcher | PPEC - UFS)
-#' @seealso \url{mailto:rzaratesalazar@gmail.com}
-#' @details Agronomist | Biodiversity - MS | Soil Science - PhD
-#' @param genus Name of the genus of the fish (ex: "Brycon")
-#' @param species Name of the fish species (ex: "orthotaenia")
-#' @return A `data.frame` with the allometric coefficients `a`, `b` and other coefficients.
+#' @details
+#' The length-weight relationship is based on the classical allometric equation:
+#'
+#' \deqn{W = a \cdot L^b}
+#'
+#' Where:
+#' - \eqn{W} is the body weight (in grams),
+#' - \eqn{L} is the length (in cm),
+#' - \eqn{a} is the intercept,
+#' - \eqn{b} is the allometric exponent.
+#'
+#' The equation is log-transformed for linear regression:
+#' \deqn{\log_{10}(W) = \log_{10}(a) + b \cdot \log_{10}(L)}
+#'
+#' Values of \eqn{b} indicate growth type:
+#' - \eqn{b ≈ 3}: isometric growth,
+#' - \eqn{b > 3}: positive allometry,
+#' - \eqn{b < 3}: negative allometry.
+#'
+#' @param genus A character vector with the genus name(s) of the fish.
+#' @param species A character vector with the species name(s) of the fish.
+#'
+#' @return A `data.frame` containing:
+#' \itemize{
+#'   \item `a`: intercept of the allometric equation
+#'   \item `b`: exponent of the allometric equation
+#'   \item `scientific_name`, `genus`, `species`, `locality`, etc.
+#' }
+#'
+#' @author
+#' Zárate-Salazar, Jhonatan Rafael, PhD \cr
+#' Researcher | PPEC - UFS \cr
+#' Email: \email{rzaratesalazar@gmail.com} \cr
+#' ORCID: \url{https://orcid.org/0000-0001-9251-5340} \cr
+#' Lattes: \url{http://lattes.cnpq.br/5635448203792516}
+#'
+#' @seealso \url{https://fishbase.se/}
 #'
 #' @importFrom magrittr %>%
 #' @importFrom rvest html_nodes html_table html_elements html_attr

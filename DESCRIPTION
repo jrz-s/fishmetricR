@@ -13,7 +13,7 @@ Description: A package to obtain allometric coefficients of fish from the FishBa
     and allow batch processing of multiple species.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
+lazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports:
@@ -25,7 +25,7 @@ Imports:
     purrr,
     janitor,
     magrittr
+VignetteBuilder: knitr
 Suggests: 
     knitr,
     rmarkdown
-VignetteBuilder: knitr
